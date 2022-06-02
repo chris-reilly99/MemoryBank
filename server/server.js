@@ -3,6 +3,8 @@ const { ApolloServer } = require('apollo-server-express');
 const path = require('path');
 const { authMiddleware } = require('./utils/auth');
 
+const mongoose = require('mongoose');
+
 const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
 
@@ -25,6 +27,12 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
+//connection to mongoose 
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/memorybank', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
+mongoose.set('debug', true);
 
 // Create a new instance of an Apollo server with the GraphQL schema
 const startApolloServer = async (typeDefs, resolvers) => {
