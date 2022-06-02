@@ -20,10 +20,11 @@ const userSchema = new Schema(
       required: true,
       minlength: 5,
     },
-    memories: [{
-        type: Schema.Types.ObjectId,
-        ref: 'Memory',
-      }],
+    // these are commented out currently, may not need to be but I'm basing the structure off of the example at week 21 activity 26, and they did not have 'thoughts' included in the user schema
+    // memories: [{
+    //     type: Schema.Types.ObjectId,
+    //     ref: 'Memory',
+    //   }],
     friends: [{
       type: Schema.Types.ObjectId,
       ref: 'User'

@@ -1,0 +1,30 @@
+[
+    {
+        "memoryText": "Birthday cake on my birthday",
+        "emotion": "Joy",
+        "date": "6/21/2021",
+        "createdAt": "Jun 21, 2021 06:30 PM",
+        "memoryAuthor": "chriscoolguy"
+    },
+    {
+        "memoryText": "Gave chris some birthday cake, wish it was mine instead :(",
+        "emotion": "Sadness",
+        "date": "6/21/2021",
+        "createdAt": "Jun 21, 2021 06:30 PM",
+        "memoryAuthor": "friendofchris"
+    },
+    {
+        "memoryText": "I was walking through the park the other day with my NOW ex-wife, and she's a *****",
+        "emotion": "Anger",
+        "date": "4/14/22",
+        "createdAt": "Apr 17, 2021 11:15 AM",
+        "memoryAuthor": "buddy"
+    },
+    {
+        "memoryText": "I love hot air balloons. My hot air balloon ride on 8/16/2021 was really fun",
+        "emotion": "Joy",
+        "date": "8/16/2021",
+        "createdAt": "Aug 18, 2021 02:54 AM",
+        "memoryAuthor": "lady"
+    }
+]
