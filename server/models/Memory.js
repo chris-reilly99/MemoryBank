@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose');
+const moment = require('moment');
 
 const memorySchema = new Schema({
     memoryText: {
@@ -14,7 +15,12 @@ const memorySchema = new Schema({
     date: {
         type: Date,
         required: true
-    }
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now,
+        get: createdAtVal => moment(createdAtVal).format('MMM DD, YYYY hh:mm a')
+    },
 })
 
 const Memory = model('Memory', memorySchema)
