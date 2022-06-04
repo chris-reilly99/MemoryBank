@@ -17,6 +17,9 @@ const memorySchema = new Schema({
         type: String,
         required: true,
     },
+    keyword: {
+        type: String
+    },
     date: {
         type: Date,
         required: true

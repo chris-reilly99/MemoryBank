@@ -9,18 +9,28 @@ const resolvers = {
             return User.find().populate('memories')
         },
         user: async (parent, {username}) => {
-            return User.findOne({username}).populate('memories')
+            return await User.findOne({username}).populate('memories')
         },
         memories: async (parent, {username}) => {
             const params = username ? {username} : {};
-            return Memory.find(params).stort({createdAt: -1});
+            return await Memory.find(params).sort({createdAt: -1});
         },
-        memory: async (parents, {memoryId}) => {
-            return Memory.findOne({_id: memoryId});
+        memory: async (parents, {memoryId, emotion, keyword}) => {
+            const params = {}
+            if (emotion){
+                params.emotion = emotion
+                return await Memory.find(params).sort({createdAt: -1})
+            }else if (keyword) {
+                params.keyword = keyword
+                return await Memory.find(params).sort({createdAt: -1})
+            }else {
+                return await Memory.findOne({_id: memoryId});
+            }
+            
         },
         me: async (parent, args, context) => {
             if (context.user) {
-              return User.findOne({ _id: context.user._id }).populate('thoughts');
+              return await User.findOne({ _id: context.user._id }).populate('memories');
             }
             throw new AuthenticationError('You need to be logged in!');
           },
@@ -36,7 +46,7 @@ const resolvers = {
       const user = await User.findOne({ email });
 
       if (!user) {
-        throw new AuthenticationError('No user found with this email address');
+        throw new AuthenticationError('No user found with these credentials');
       }
 
       const correctPw = await user.isCorrectPassword(password);
@@ -49,7 +59,7 @@ const resolvers = {
 
       return { token, user };
     },
-    addMemory: async (parent, {memoryText, emotion, date}, context) => {
+    addMemory: async (parent, {memoryText, keyword, emotion, date}, context) => {
         if (context.user) {
             const memory = await Memory.create({
                 memoryText,
