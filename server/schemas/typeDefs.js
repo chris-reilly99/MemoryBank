@@ -13,6 +13,7 @@ const typeDefs = gql`
         _id: ID
         memoryOwner: String!
         memoryText: String!
+        keyword: String
         emotion: String!
         date: String!
         createdAt: String
