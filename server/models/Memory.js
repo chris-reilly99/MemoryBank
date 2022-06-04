@@ -2,6 +2,11 @@ const { Schema, model } = require('mongoose');
 const moment = require('moment');
 
 const memorySchema = new Schema({
+    memoryOwner: {
+        type: String,
+        required: true,
+        trim: true,
+      },
     memoryText: {
         type: String,
         required: 'No empty memories!',
