@@ -2,7 +2,6 @@ import React from 'react';
 import { Col } from 'react-bootstrap';
 import { Row } from 'react-bootstrap';
 import { Form } from 'react-bootstrap';
-import { Button } from 'react-bootstrap';
 
 function Login () {
 return (
