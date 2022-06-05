@@ -5,16 +5,16 @@ import Header from './components/Header';
 import CardA from './components/CardA';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import SignUp from './components/SignUp';
-// import Login from './components/Login';
-// import Login from './components/Login';
+import Login from './components/Login';
+
 
 // In our main App component, we are rendering only single instances of Header and Navbar and several instances of Card
 function App() {
   return (
     <div>
-      
+
       <Router>
-      <Header />
+        <Header />
         <Routes>
           <Route
             path='/'
@@ -24,10 +24,18 @@ function App() {
 
           <Route
             path='/SignUp'
-            element={<SignUp/>}
+            element={<SignUp />}
 
           />
+          <Route
+            path='/Login'
+            element={<Login />}
+
+          />
+
+
         </Routes>
+
       </Router>
 
     </div>

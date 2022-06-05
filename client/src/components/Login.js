@@ -7,18 +7,15 @@ import { Button } from 'react-bootstrap';
 function Login () {
 return (
 
-    <Form>
-  <Row>
-    <Col>
-      <Form.Control placeholder="Username" />
-    </Col>
-    <Col>
-      <Form.Control placeholder="Password" />
-    </Col>
-  </Row>
-  <Button variant="primary" type="submit">
-    Submit
-  </Button>
+<Form className="mt-5">
+  <Form.Group className="mb-3" controlId="formGroupUsername">
+    <Form.Label>Username</Form.Label>
+    <Form.Control type="email" placeholder="Enter Username" />
+  </Form.Group>
+  <Form.Group className="mb-3" controlId="formGroupPassword">
+    <Form.Label>Password</Form.Label>
+    <Form.Control type="password" placeholder="Password" />
+  </Form.Group>
 </Form>
 
 
