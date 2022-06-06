@@ -6,12 +6,12 @@ import { Button } from 'react-bootstrap';
 
 const styles = {
   rectangleShape: {
-    background: '#9a74db',
-    minHeight: 50,
-    lineHeight: 3.5,
-    fontSize: '1.2rem',
-    color: 'white',
-    padding: '0px 10px',
+  background: '#9a74db',
+  minHeight: 50,
+  lineHeight: 3.5,
+  fontSize: '1.2rem',
+  color: 'white',
+  padding: '0px 10px',
   
   },
 };
@@ -21,7 +21,6 @@ function Login () {
 return (
 <div style={styles.rectangleShape}>
 <Form className="mt-5">
-
     <Col xs={7} md={{ span: 4, offset: 4 }}>
         <Form.Group className="mb-3" controlId="formGroupUsername">
     <Form.Label>Username</Form.Label>
@@ -39,7 +38,7 @@ return (
     Submit
   </Button>
   </Col>
-
+  
 </Form>
 </div>
 
