@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 
 function Header() {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="Primary" expand="lg">
   <Container fluid>
     <Navbar.Brand href="#">Emotional Memories Diary</Navbar.Brand>
     <Navbar.Toggle aria-controls="navbarScroll" />
