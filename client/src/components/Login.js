@@ -1,8 +1,5 @@
 import React from 'react';
-import { Col } from 'react-bootstrap';
-import { Row } from 'react-bootstrap';
-import { Form } from 'react-bootstrap';
-import { Button } from 'react-bootstrap';
+import { Col, Row, Form, Button } from 'react-bootstrap';
 
 const styles = {
   rectangleShape: {

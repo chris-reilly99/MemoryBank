@@ -1,6 +1,5 @@
 import React from 'react';
-import { Card } from 'react-bootstrap';
-import { ListGroup } from 'react-bootstrap';
+import { Card, ListGroup } from 'react-bootstrap';
 import '../styles/Header.css';
 
 // We declare an object called styles that will contain a few objects for card and heading styles
