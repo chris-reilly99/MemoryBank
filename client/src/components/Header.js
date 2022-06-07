@@ -1,13 +1,7 @@
 import React from 'react';
 // Here we are importing a CSS file as a dependency
 import '../styles/Header.css';
-import { Navbar } from 'react-bootstrap';
-import { Container } from 'react-bootstrap';
-import { Form } from 'react-bootstrap';
-import { Nav } from 'react-bootstrap';
-import { FormControl } from 'react-bootstrap';
-import { Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Navbar, Container, Form, Nav, FormControl, Button, Link } from 'react-bootstrap';
 
 function Header() {
   return (
