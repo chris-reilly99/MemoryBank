@@ -16,35 +16,70 @@ const styles = {
 
 
 
-function SignUp () {
+const SignUp = () => {
+  const [formState, setFormState] = useState({
+    username: '',
+    email: '',
+    password: '',
+  });
+  const [addUser, { error, data }] = useMutation(ADD_USER);
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
+  };
+
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+    console.log(formState);
+
+    try {
+      const { data } = await addUser({
+        variables: { ...formState },
+      });
+
+      Auth.login(data.addUser.token);
+    } catch (e) {
+      console.error(e);
+    }
+  };
 return (
 <div style={styles.rectangleShape}>
-<Form className="mt-5">
+<Form className="mt-5" onSubmit={handleFormSubmit}>
   <Col xs={7} md={{ span: 4, offset: 4 }}>
-    <Form.Group as={Col} controlId="formGridEmail">
+    <Form.Group as={Col} controlId="formGridFirstName">
       <Form.Label>First Name</Form.Label>
-      <Form.Control type="First Name" placeholder="Enter First Name" />
+      <Form.Control type="First Name" placeholder="Enter First Name" value={formState.firstName} onSubmit={handleChange} />
     </Form.Group>
     </Col>
     
     <Col xs={7} md={{ span: 4, offset: 4 }}>
-    <Form.Group as={Col} controlId="formGridPassword">
+    <Form.Group as={Col} controlId="formGridLastName">
       <Form.Label>Last Name</Form.Label>
-      <Form.Control type="Last Name" placeholder="Enter Last Name" />
+      <Form.Control type="Last Name" placeholder="Enter Last Name" value={formState.lastName}  onSubmit={handleChange}/>
     </Form.Group>
     </Col>
     
-  
+    <Col xs={7} md={{ span: 4, offset: 4 }}>
+  <Form.Group className="mb-3" controlId="formGridEmail">
+    <Form.Label>Email</Form.Label>
+    <Form.Control placeholder="Email" value={formState.email} onSubmit={handleChange}/>
+  </Form.Group>
+  </Col>
   <Col xs={7} md={{ span: 4, offset: 4 }}>
   <Form.Group className="mb-3" controlId="formGridAddress1">
     <Form.Label>Username</Form.Label>
-    <Form.Control placeholder="Username" />
+    <Form.Control placeholder="Username" value={formState.username} onSubmit={handleChange}/>
   </Form.Group>
   </Col>
   <Col xs={7} md={{ span: 4, offset: 4 }}>
   <Form.Group className="mb-3" controlId="formGridAddress2">
     <Form.Label>Password</Form.Label>
-    <Form.Control placeholder="Password" />
+    <Form.Control placeholder="Password" value={formState.password} onSubmit={handleChange}/>
   </Form.Group>
   </Col>
   <Col xs={7} md={{ span: 4, offset: 4 }}>
