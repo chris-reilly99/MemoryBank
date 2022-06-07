@@ -1,0 +1,26 @@
+[
+    {
+        "username": "chriscoolguy",
+        "email": "chris@chris.com",
+        "password": "secretword",
+        "friends": ["friendofchris", "buddy"]
+    },
+    {
+        "username": "friendofchris",
+        "email": "friend@chris.com",
+        "password": "",
+        "friends": ["chriscoolguy", "buddy", "lady"]
+    },
+    {
+        "username": "buddy",
+        "email": "buddy@gmail.com",
+        "password": "",
+        "friends": ["friendofchris", "chriscoolguy", "lady"]
+    },
+    {
+        "username": "lady",
+        "email": "lady@yahoo.com",
+        "password": "",
+        "friends": ["buddy", "friendofchris"]
+    }
+]
