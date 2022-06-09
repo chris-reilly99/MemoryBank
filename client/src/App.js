@@ -1,6 +1,5 @@
 import React from 'react';
 import { useState } from 'react';
-import Navbar from './components/Navbar';
 import Header from './components/Header';
 import CardA from './components/CardA';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
