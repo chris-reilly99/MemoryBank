@@ -37,8 +37,8 @@ const resolvers = {
     },
     Mutation: {
 //need mutations for adding users, logging in, adding/updating/removing memories.
-    addUser: async (parent, { username, email, password }) => {
-      const user = await User.create({ username, email, password });
+    addUser: async (parent, { firstName, lastName, username, email, password }) => {
+      const user = await User.create({ firstName, lastName, userName, email, password });
       const token = signToken(user);
       return { token, user };
     },

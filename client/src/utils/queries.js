@@ -61,6 +61,8 @@ query me {
     me {
         _id
         username
+        firstName
+        lastName
         email
         memories{
             _id
