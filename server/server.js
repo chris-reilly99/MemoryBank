@@ -28,11 +28,11 @@ app.get('/', (req, res) => {
 });
 
 //connection to mongoose 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/memorybank', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-});
-mongoose.set('debug', true);
+// mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/memorybank', {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true
+// });
+// mongoose.set('debug', true);
 
 // Create a new instance of an Apollo server with the GraphQL schema
 const startApolloServer = async (typeDefs, resolvers) => {
