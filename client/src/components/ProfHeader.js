@@ -4,7 +4,7 @@ import { Navbar, Container, Nav, Form, FormControl, Button} from 'react-bootstra
 
 function ProfHeader() {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="primary" expand="lg">
   <Container fluid>
     <Navbar.Brand href="#">Emotional Memories Diary</Navbar.Brand>
     <Navbar.Toggle aria-controls="navbarScroll" />
@@ -14,17 +14,15 @@ function ProfHeader() {
         style={{ maxHeight: '100px' }}
         navbarScroll
       >
+        
 
       </Nav>
-      <Form className="d-flex">
-        <FormControl
-          type="search"
-          placeholder="Search"
-          className="me-2"
-          aria-label="Search"
-        />
-        <Button variant="outline-success">Recall Memory</Button>
-      </Form>
+      <Nav>
+      <Nav.Link eventKey={2} href="#memes">
+        Logout
+      </Nav.Link>
+    </Nav>
+     
     </Navbar.Collapse>
   </Container>
 </Navbar>
