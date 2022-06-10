@@ -19,7 +19,7 @@ const styles = {
 
 
 const Login = (props) => {
-  const [formState, setFormState] = useState({ email: '', password: '' });
+  const [formState, setFormState] = useState({ username: '', password: '' });
   const [login, { error, data }] = useMutation(LOGIN_USER);
 
   // update state based on form input changes
@@ -48,24 +48,24 @@ const Login = (props) => {
 
     // clear form values
     setFormState({
-      email: '',
+      username: '',
       password: '',
     });
   };
 
 return (
 <div style={styles.rectangleShape}>
-<Form className="mt-5" onsubmit ={handleFormSubmit}>
+<Form className="mt-5" onSubmit ={handleFormSubmit}>
     <Col xs={7} md={{ span: 4, offset: 4 }}>
         <Form.Group className="mb-3" controlId="formGroupUsername">
     <Form.Label>Username</Form.Label>
-    <Form.Control type="email" placeholder="Enter Username" value={formState.email} onChange={handleChange} />
+    <Form.Control type="text" name="username" placeholder="Enter Username" value={formState.username} onChange={handleChange} />
   </Form.Group>
     </Col>
     <Col xs={7} md={{ span: 4, offset: 4 }}>
        <Form.Group className="mb-3" controlId="formGroupPassword">
     <Form.Label>Password</Form.Label>
-    <Form.Control type="password" placeholder="Password" value={formState.password} onChange={handleChange} />
+    <Form.Control type="password" name="password" placeholder="Password" value={formState.password} onChange={handleChange} />
   </Form.Group>
     </Col>
     <Col xs={7} md={{ span: 4, offset: 4 }}>

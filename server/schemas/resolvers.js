@@ -38,12 +38,12 @@ const resolvers = {
     Mutation: {
 //need mutations for adding users, logging in, adding/updating/removing memories.
     addUser: async (parent, { firstName, lastName, username, email, password }) => {
-      const user = await User.create({ firstName, lastName, userName, email, password });
+      const user = await User.create({ firstName, lastName, username, email, password });
       const token = signToken(user);
       return { token, user };
     },
-    login: async (parent, { email, password }) => {
-      const user = await User.findOne({ email });
+    login: async (parent, { username, password }) => {
+      const user = await User.findOne({ username });
 
       if (!user) {
         throw new AuthenticationError('No user found with these credentials');
