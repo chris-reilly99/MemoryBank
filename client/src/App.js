@@ -12,6 +12,7 @@ import CardA from './components/CardA';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import SignUp from './components/SignUp';
 import Login from './components/Login';
+import Profile from './pages/Profile'
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -52,6 +53,11 @@ function App() {
           <Route
             path='/Login'
             element={<Login />}
+
+          />
+          <Route
+            path='/Profile'
+            element={<Profile />}
 
           />
 
