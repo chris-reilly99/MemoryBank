@@ -16,9 +16,9 @@ function Header() {
         style={{ maxHeight: '100px' }}
         navbarScroll
       >
-        <Nav.Link><Link to={"/SignUp"}>Sign Up</Link> </Nav.Link>
+        <Link to={"/SignUp"}>Sign Up</Link> 
       
-        <Nav.Link><Link to={"/Login"}>Login</Link></Nav.Link>
+        <Link to={"/Login"}>Login</Link>
 
       </Nav>
     </Navbar.Collapse>
