@@ -1,5 +1,11 @@
 import React, { useState } from 'react';
 import EmotionsForm from './EmotionsForm';
+import {useParams} from 'react-router-dom'
+import {useQuery} from '@apollo/client'
+import {QUERY_ONE_MEMORY, QUERY_USER, QUERY_ME} from '../utils/queries'
+
+// const Feeling = ({memory})=>{
+
 
 function Feeling(props) {
   const [edit, setEdit] = useState({

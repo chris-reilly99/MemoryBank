@@ -1,4 +1,8 @@
 import React, { useState } from 'react';
+import {useMutation} from '@apollo/client'
+import {ADD_MEMORY} from '../utils/mutations'
+import {QUERY_MEMORIES, QUERY_ME} from '../utils/queries'
+import Auth from '../utils/auth'
 
 function EmotionsForm(props) {
   const [input, setInput] = useState('');
@@ -6,13 +10,40 @@ function EmotionsForm(props) {
 
   const emotionsLevel = ['Fear', 'Joy', 'Anger', 'Disgust', 'Sadness']
 
-  const handleSubmit = (e) => {
+  const [addMemory, {error}] = useMutation(ADD_MEMORY, {
+    update(cache, {data: {addMemory}}) {
+      try {
+        const {memories} = cache.readQuery({ query: QUERY_MEMORIES})
+        cache.writeQuery({
+          query: QUERY_MEMORIES,
+          data: {memories: [addMemory, ...memories]}
+        })
+      } catch (e) {
+        console.error(e)
+      }
+      const {me} = cache.readQuery({query: QUERY_ME});
+      cache.writeQuery({
+        query: QUERY_ME,
+        data: {me: {...me, memories: [...me.memories, addMemory]}}
+      })
+    }
+  })
+
+  const handleSubmit = async(e) => {
     e.preventDefault();
 
     if (!emotions) {
       emotions = 'Fear';
     }
-
+    // const {data} = await addMemory({
+    //   variables: {
+    //     memoryText: input,
+    //     emotion: emotions,
+    //     // date,
+    //     // keyword,
+    //     memoryOwner: Auth.getProfile().data.username
+    //   }
+    // })
     props.onSubmit({
       id: Math.random(Math.floor() * 1000),
       text: input,

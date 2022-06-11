@@ -1,6 +1,29 @@
 import React, { useState } from 'react';
 import EmotionsForm from './EmotionsForm';
 import Feeling from './Feeling';
+// import {useQuery} from '@apollo/client'
+// import { QUERY_MEMORIES } from '../utils/queries';
+
+const FeelingList = ({
+  memories,
+  showTitle = true,
+
+
+}) => {
+  if (!memories.length){
+    return <h3>You don't have any memories recorded...</h3>
+  }
+  return (
+    <div>
+      {showTitle && <h3>{title}</h3>}
+      {memories && memories.map((memory) => {
+        <Feeling
+        feeling={memory}/>
+      })}
+    </div>
+  )
+
+}
 
 function FeelingList() {
   const [feeling, setFeeling] = useState([]);

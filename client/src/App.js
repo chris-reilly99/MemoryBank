@@ -45,7 +45,7 @@ function App() {
 
           />
 
-          <Route
+          {/* <Route
             path='/SignUp'
             element={<SignUp />}
 
@@ -59,7 +59,7 @@ function App() {
             path='/Profile'
             element={<Profile />}
 
-          />
+          /> */}
 
 
         </Routes>

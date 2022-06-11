@@ -30,7 +30,7 @@ export const ADD_USER = gql`
 
 export const ADD_MEMORY = gql`
 mutation addMemory($memoryText: String!, $emotion: String!, $date: String!, $keyword: String){
-    addMemory(memoryText: $memoryText, emotion: $emotion, date: $date){
+    addMemory(memoryText: $memoryText, emotion: $emotion, date: $date, keyword: $keyword){
         _id
         memoryOwner
         memoryText

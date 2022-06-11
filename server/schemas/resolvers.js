@@ -65,6 +65,7 @@ const resolvers = {
                 memoryText,
                 emotion,
                 date,
+                keyword,
                 memoryOwner: context.user.username
             });
             await User.findOneAndUpdate(
