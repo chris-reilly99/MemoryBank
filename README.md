@@ -12,16 +12,17 @@ You can access the deployed version through the following link: **ADD LINK TO HE
 - [Table of Contents](#table-of-contents)
 - [Installation](#installation)
 - [Usage](#usage)
-- [License](#license)
 - [Contributors](#contributors)
+- [License](#license)
 
 ## Installation
 
 To install this application:
+Clone this repository, and run the following commands:
+
+
 
 ## Usage
-
-## License
 
 ## Contributors
 Contact us if you have any suggestions!
@@ -42,7 +43,7 @@ GitHub: [ThreeBrainCells](https://github.com/ThreeBrainCells)
 <br>
 LinkedIn: [Graeme Montrose](https://www.linkedin.com/in/graeme-montrose-4a7698174/)
 <br>
-Email: 
+Email: teentrose@gmail.com
 
 **Kourtney Krogman**
 <br>
@@ -50,4 +51,27 @@ GitHub: [kkrogs](https://github.com/kkrogs)
 <br>
 LinkedIn: [Kourtney Krogman](https://www.linkedin.com/in/kourtney-k-965585161/)
 <br>
-Email: 
+Email: kourtney.krogman@gmail.com
+
+## License
+MIT License
+
+Copyright (c) 2022 Chris Reilly
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
