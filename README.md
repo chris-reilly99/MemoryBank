@@ -10,17 +10,19 @@ You can access the deployed version through the following link: **ADD LINK TO HE
 ## Table of Contents
 - [Description](#description)
 - [Table of Contents](#table-of-contents)
-- [Installation](#installation)
-- [Usage](#usage)
+- [Installation and Usage](#installation-and-usage)
+- [Demo](#demo)
 - [Contributors](#contributors)
 - [License](#license)
 
-## Installation
+## Installation and Usage
 
-To install this application:
-Clone this repository, and run the following commands:
+To install this application, clone this repository, and run the following commands:
+
+Now to run the application:
 
 
+## Demo
 
 ## Usage
 
