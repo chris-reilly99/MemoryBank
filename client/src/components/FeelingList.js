@@ -23,7 +23,7 @@ const FeelingList = ({
       {memories && memories.map((memory) => (
         <div className="card mb-3">
           <h4 className="card-header bg-primary text-light p-2 m-0">
-            {(
+            {showUsername ?(
               <Link
                 className='text-light'
                 to={`/profiles/${memory.memoryAuthor}`}
@@ -53,16 +53,7 @@ const FeelingList = ({
 };
 
 
-// i believe this is the old code below
-=======
-      {memories && memories.map((memory) => {
-        <Feeling
-        feeling={memory}/>
-      })}
-    </div>
-  )
 
-}
 
 
 export default FeelingList;
