@@ -6,10 +6,10 @@ const resolvers = {
     Query: {
 // Need queries for user, users, memory, memories, me
         users: async () => {
-            return User.find().populate('memories')
+            return User.find()
         },
         user: async (parent, {username}) => {
-            return await User.findOne({username}).populate('memories')
+            return await User.findOne({username})
         },
         memories: async (parent, {username}) => {
             const params = username ? {username} : {};
@@ -30,7 +30,7 @@ const resolvers = {
         },
         me: async (parent, args, context) => {
             if (context.user) {
-              return await User.findOne({ _id: context.user._id }).populate('memories');
+              return await User.findOne({ _id: context.user._id });
             }
             throw new AuthenticationError('You need to be logged in!');
           },

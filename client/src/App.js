@@ -10,8 +10,8 @@ import { setContext } from '@apollo/client/link/context';
 import Header from './components/Header';
 import CardA from './components/CardA';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import SignUp from './components/SignUp';
-import Login from './components/Login';
+import SignUp from './pages/SignUp';
+import Login from './pages/Login';
 import Profile from './pages/Profile'
 
 const httpLink = createHttpLink({
