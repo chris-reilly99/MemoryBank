@@ -1,8 +1,13 @@
 import React from 'react';
 // Here we are importing a CSS file as a dependency
 import { Navbar, Container, Nav, Form, FormControl, Button} from 'react-bootstrap';
+import Auth from '../../utils/auth';
 
 function ProfHeader() {
+  const logout = (event) => {
+    event.preventDefault();
+    Auth.logout()
+  }
   return (
     <Navbar bg="primary" expand="lg">
   <Container fluid>
@@ -19,7 +24,9 @@ function ProfHeader() {
       </Nav>
       <Nav>
       <Nav.Link eventKey={2} href="#memes">
-        Logout
+      <button onClick={logout}>
+                Logout
+              </button>
       </Nav.Link>
     </Nav>
      
