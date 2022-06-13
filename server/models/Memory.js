@@ -22,7 +22,7 @@ const memorySchema = new Schema({
     },
     date: {
         type: Date,
-        required: true
+        // required: true
     },
     createdAt: {
         type: Date,

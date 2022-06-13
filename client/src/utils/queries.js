@@ -21,26 +21,26 @@ query user($username: String!) {
   }
 `;
 
-export const QUERY_USERS = gql`
-query users() {
-    users {
-        _id
-        username
-        firstName
-        lastName
-        email
-        memories {
-            _id
-            memoryOwner
-            memoryText
-            keyword
-            emotion
-            date
-            createdAt
-        }
-    }
-}
-`
+// export const QUERY_USERS = gql`
+// query users() {
+//     users {
+//         _id
+//         username
+//         firstName
+//         lastName
+//         email
+//         memories {
+//             _id
+//             memoryOwner
+//             memoryText
+//             keyword
+//             emotion
+//             date
+//             createdAt
+//         }
+//     }
+// }
+// `
 
 export const QUERY_MEMORIES = gql`
 query getMemories($username: String!) {

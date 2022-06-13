@@ -35,15 +35,15 @@ function EmotionsForm(props) {
     if (!emotions) {
       emotions = 'Fear';
     }
-    // const {data} = await addMemory({
-    //   variables: {
-    //     memoryText: input,
-    //     emotion: emotions,
-    //     // date,
-    //     // keyword,
-    //     memoryOwner: Auth.getProfile().data.username
-    //   }
-    // })
+    const {data} = await addMemory({
+      variables: {
+        memoryText: input,
+        emotion: emotions,
+        // date,
+        // keyword,
+        memoryOwner: Auth.getProfile().data.username
+      }
+    })
     props.onSubmit({
       id: Math.random(Math.floor() * 1000),
       text: input,

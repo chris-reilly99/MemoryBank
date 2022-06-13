@@ -15,14 +15,15 @@ const Profile = () => {
     const { username: userParam } = useParams();
     console.log(userParam)
 
-    const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
+    const { loading, data } = useQuery(userParam ? QUERY_USER: QUERY_ME, {
       variables: { username: userParam },
     });
-  
+    console.log(data)
     const user = data?.me || data?.user || {};
+    console.log(user)
     // navigate to personal profile page if username is yours
     if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
-      return <Navigate to="/me" />;
+      return <Navigate to="/Profile" replace={true} />;
     }
   
     if (loading) {

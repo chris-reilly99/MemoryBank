@@ -8,7 +8,7 @@ const typeDefs = gql`
     username: String!
     email: String!
     password: String!
-    memories: [Memory]!
+    memories: [Memory]
     }
 
     type Memory {
@@ -17,7 +17,7 @@ const typeDefs = gql`
         memoryText: String!
         keyword: String
         emotion: String!
-        date: String!
+        date: String
         createdAt: String
     }
 
@@ -37,7 +37,7 @@ const typeDefs = gql`
     type Mutation {
         addUser(firstName: String!, lastName: String!, username: String!, email: String!, password: String!): Auth
         login(username: String!, password: String!): Auth
-        addMemory(memoryOwner: String!, memoryText: String!, emotion: String!, date: String!, keyword: String): Memory
+        addMemory(memoryOwner: String!, memoryText: String!, emotion: String!, date: String, keyword: String): Memory
         updateMemory(memoryId: ID!, emotion: String!): Memory
         removeMemory(memoryId: ID!): Memory
     }
