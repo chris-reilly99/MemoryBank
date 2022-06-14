@@ -2,7 +2,7 @@ import React from 'react';
 import { Navigate, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 
-
+import EmotionsForm from '../components/EmotionsForm'
 import ProfHeader from '../components/ProfHeader'
 import RecallMem from '../components/RecallMem'
 import FeelingsList from '../components/FeelingList'
@@ -44,6 +44,8 @@ const Profile = () => {
       <div className="Bucket-app">
        <RecallMem />
        <div>
+        <EmotionsForm
+        data={data.me}/>
         <FeelingsList 
         memories ={user.memories}
         title={`${user.username}'s memories...`}

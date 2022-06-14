@@ -1,7 +1,7 @@
 import React from 'react';
 // Here we are importing a CSS file as a dependency
 import { Navbar, Container, Nav, Form, FormControl, Button} from 'react-bootstrap';
-import Auth from '../../utils/auth';
+import Auth from '../utils/auth';
 
 function ProfHeader() {
   const logout = (event) => {
