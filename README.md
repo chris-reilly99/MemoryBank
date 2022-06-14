@@ -5,13 +5,12 @@ Ever seen the Pixar movie, Inside Out? In it, we get to see the emotions of the 
 
 This application is a place to share memories and any associated emotions that may come along with them. With an element of social media and networking, you can have friends and see their associated memories as well. 
 
-You can access the deployed version through the following link: **ADD LINK TO HEROKU HERE ONCE DEPLOYED**
+You can access the deployed version through the following link: https://glm-cr-kk-memory-bank.herokuapp.com/
 
 ## Table of Contents
 - [Description](#description)
 - [Table of Contents](#table-of-contents)
 - [Installation and Usage](#installation-and-usage)
-- [Demo](#demo)
 - [Contributors](#contributors)
 - [License](#license)
 
@@ -19,12 +18,9 @@ You can access the deployed version through the following link: **ADD LINK TO HE
 
 To install this application, clone this repository, and run the following commands:
 
-Now to run the application:
+`npm i`
 
-
-## Demo
-
-## Usage
+`npm run develop`
 
 ## Contributors
 Contact us if you have any suggestions!
