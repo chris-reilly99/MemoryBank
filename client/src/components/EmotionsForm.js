@@ -7,7 +7,7 @@ import Auth from '../utils/auth'
 function EmotionsForm(props) {
   const [input, setInput] = useState('');
   let [emotions, setEmotions] = useState('');
-
+  console.log(props)
   const emotionsLevel = ['Fear', 'Joy', 'Anger', 'Disgust', 'Sadness']
 
   const [addMemory, {error}] = useMutation(ADD_MEMORY, {
@@ -42,13 +42,15 @@ function EmotionsForm(props) {
         // date,
         // keyword,
         memoryOwner: Auth.getProfile().data.username
+        
       }
     })
-    props.onSubmit({
-      id: Math.random(Math.floor() * 1000),
-      text: input,
-      emotions: emotions,
-    });
+    // props.onSubmit({
+    //   id: Math.random(Math.floor() * 1000),
+    //   text: input,
+    //   emotions: emotions,
+    // });
+    console.log(data)
 
     setInput('');
     setEmotions('');

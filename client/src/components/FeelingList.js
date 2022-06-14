@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useReducer, useState } from 'react';
 import { Link } from 'react-router-dom';
 // import EmotionsForm from './EmotionsForm';
 // import Feeling from './Feeling';
@@ -10,6 +10,7 @@ const FeelingList = ({
   memories,
   title,
   showTitle = true,
+  showUsername = true
 
 
 }) => {
@@ -26,7 +27,7 @@ const FeelingList = ({
             {showUsername ?(
               <Link
                 className='text-light'
-                to={`/profiles/${memory.memoryAuthor}`}
+                to={`/profiles/${memory.memoryOwner}`}
               >
                 I was feeling {memory.emotion} on {memory.date}
                 I remembered this on {memory.createdAt}
@@ -35,7 +36,7 @@ const FeelingList = ({
             ) : (
             <>
               <span>
-                I was feeling {memory.emotion} on {memory.createdAt} I remembered this on {memory.createdAt}
+                I, {memory.memoryOwner} was feeling {memory.emotion} on {memory.createdAt} I remembered this on {memory.createdAt}
 
               </span>
             </>

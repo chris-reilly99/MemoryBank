@@ -11,9 +11,9 @@ try {
   await User.create(userSeeds);
 
   for (let i = 0; i < memorySeeds.length; i++) {
-    const { _id, memoryAuthor } = await Memory.create(memorySeeds[i]);
+    const { _id, memoryOwner } = await Memory.create(memorySeeds[i]);
     const user = await User.findOneAndUpdate(
-      { username: memoryAuthor },
+      { username: memoryOwner },
       {
         $addToSet: {
           memories: _id,

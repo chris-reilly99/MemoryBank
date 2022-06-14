@@ -29,11 +29,7 @@ const memorySchema = new Schema({
         default: Date.now,
         get: createdAtVal => moment(createdAtVal).format('MMM DD, YYYY hh:mm a')
     },
-    memoryAuthor: {
-        type: String,
-        required: true,
-        trim: true,
-    }
+
 })
 
 const Memory = model('Memory', memorySchema)
